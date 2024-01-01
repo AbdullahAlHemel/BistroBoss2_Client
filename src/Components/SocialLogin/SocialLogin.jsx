@@ -26,7 +26,7 @@ const SocialLogin = () => {
     return (
             <button onClick={handleGoogleSignIn} className="w-96 mb-6 m-auto px-10 btn">
                     <FaGoogle/>Google
-            </button>
+            </button>   
     );
 };
 

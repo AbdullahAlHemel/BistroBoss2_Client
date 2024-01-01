@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
 import SocialLogin from '../../Components/SocialLogin/SocialLogin';
-
+  
 const Login = () => {
    const [disabled, setDisabled] = useState(true);  
 

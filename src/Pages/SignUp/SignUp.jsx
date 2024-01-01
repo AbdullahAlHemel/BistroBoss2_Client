@@ -9,7 +9,7 @@ import useAxiosPublic from "../../Components/Hooks/useAxiosPublic";
 const SignUp = () => {
     const axiosPublic = useAxiosPublic()
     const {register,handleSubmit ,reset , formState: { errors }} = useForm();
-    const {createUser, updateUserProfile} = useContext(AuthContext)
+    const {createUser, updateUserProfile} = useContext(AuthContext) 
     const navigate = useNavigate()
 
     const onSubmit = (data) => { 
