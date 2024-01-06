@@ -2,14 +2,16 @@ import { useForm } from "react-hook-form";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { FaUtensils } from "react-icons/fa";
 import useAxiosPublic from "../../../Components/Hooks/useAxiosPublic";
+import useAxiosSecure from "../../../Components/Hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const AddItems = () => {
-    const { register, handleSubmit } = useForm()
-    const axiosPublic = useAxiosPublic()
-
+    const { register, handleSubmit, reset } = useForm()
+    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const onSubmit = async(data) => {
         console.log(data)
         //image upload to imgbb and then get an url
@@ -28,8 +30,22 @@ const AddItems = () => {
                 recipe: data.recipe,
                 image: res.data.data.display_url
             }
+            //
+            const menuRes = await axiosSecure.post('/menu', menuItem);
+            console.log(menuRes.data);
+            if(menuRes.data.insertedId){
+                // show success popup
+                reset();
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${data.name} is added to the menu.`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
         }
-        console.log(res.data)
+        console.log('with image url', res.data)
     }
     return (
         <div>
@@ -62,7 +78,7 @@ const AddItems = () => {
                        required
                        {...register("category")} 
                        className="select select-bordered w-full">
-                        <option disabled value="default" selected>Select a category</option>
+                        <option disabled value="default" >Select a category</option>
                         <option value='salad'>Salad</option>
                         <option value='pizza'>Pizza</option>
                         <option value='desert'>Desert</option>
