@@ -71,6 +71,7 @@ const ManageItems = () => {
            </div>
         </td>
         <td>
+            
             <h2>$ {item.price}</h2>
         </td>
         <td>
