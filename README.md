@@ -1,7 +1,49 @@
-Bistro Boss's ambiance, seamlessly blending aesthetics with functionality. Striking images of meticulously crafted dishes are complemented by an intuitive layout, making it effortless for visitors to explore the diverse menu offerings. Each section is thoughtfully curated, offering a visual and textual symphony that mirrors the richness of the dining experience.
+# Bistro-Boss Client 🍽️
 
-Beyond its captivating visuals, the website boasts user-friendly features, such as an online reservation system that ensures a seamless and convenient booking process. Patrons can also delve into the chef's inspirations, ingredient stories, and cooking techniques through engaging blog posts and behind-the-scenes videos, fostering a sense of connection between the kitchen and the diner.
+[![Live Demo](https://img.shields.io/badge/demo-online-green)](https://bistro-boss-1955d.web.app/)  
+> A modern, responsive front-end for Bistro-Boss — a restaurant / food ordering platform.
 
-The interactive elements extend to social media integration, allowing patrons to share their dining experiences effortlessly. From virtual menu tastings to live-streamed cooking demonstrations, Bistro Boss's website brings the culinary magic into the homes of its online audience.
+## 🔎 Overview
 
-In an era where the digital landscape is becoming increasingly vital for businesses, Bistro Boss's website isn't just a platform; it's a gateway to a gastronomic adventure, blending technology with the art of fine dining.
+Bistro-Boss Client is the front-end application of a restaurant ordering system. It allows users to:
+- Browse menu items  
+- Add items to cart  
+- Place orders  
+- (Future) login / user account / order history  
+
+The UI is built with **React**, styled using **Tailwind CSS**, and bundled via **Vite**. 
+
+## 🚀 Live Demo
+
+Try it now: [https://bistro-boss-1955d.web.app/](https://bistro-boss-1955d.web.app/)
+
+## 🧰 Tech Stack
+
+- React (JavaScript)  
+- Vite  
+- Tailwind CSS  
+- HTML / CSS / JS  
+
+_(Check `package.json` for full dependency list)_  
+
+## 📦 Getting Started — Run Locally
+
+> Make sure you have Node.js and npm/yarn installed  
+
+```bash
+# 1. Clone the repo  
+git clone https://github.com/AbdullahAlHemel/Bistro-boss-client-2.git  
+
+# 2. Change directory  
+cd Bistro-boss-client-2  
+
+# 3. Install dependencies  
+npm install  
+# or yarn install  
+
+# 4. Start development server  
+npm run dev  
+# or yarn dev  
+
+# 5. Open in browser  
+# Usually at http://localhost:5173 or as shown in console  
